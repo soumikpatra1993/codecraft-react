@@ -141,6 +141,9 @@
     .image {
         transform: translate(137px , -25px) scale(1.2);
     }
+    .details {
+        min-width: 45px;
+    }
     .current {
         display: none;
     }
