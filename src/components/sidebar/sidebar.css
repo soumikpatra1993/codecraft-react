@@ -141,8 +141,11 @@
     .image {
         transform: translate(137px , -25px) scale(1.2);
     }
+    .ranged {
+        padding-left: 2em;
+    }
     .details {
-        min-width: 45px;
+        min-width: 55px;
     }
     .current {
         display: none;
