@@ -5,9 +5,9 @@ import Roundy from 'roundy';
 
 class dashboard extends Component {
     state = {
-        value : 64 , 
+        value : 50 , 
         arr : [] ,
-        focus : 1
+        focus : 1 ,
     }
 
     getData = (context) => {
@@ -16,9 +16,10 @@ class dashboard extends Component {
       arr : context
   })
     }
-    highLight =(val) => {
+    highLight =(val , percentage) => {
 this.setState({
-    focus : val
+    focus : val ,
+    value : percentage
 })
 
     }
@@ -77,7 +78,7 @@ this.setState({
 
                     </div>
                     <div className="lists">
-                        <div className ={"item" + `${this.state.focus === 1 ? " active" : "" }`}  onClick = {this.highLight.bind(this, 1)}>
+                        <div className ={"item" + `${this.state.focus === 1 ? " active" : "" }`}  onClick = {this.highLight.bind(this, 1, 50)}>
                             <div className="innerbar">
                                 <img src= {require('../../assets/morning-wh.png')} alt="morning" />
                                 <div className="time" >Morning</div>
@@ -87,7 +88,7 @@ this.setState({
                                 <img src= {require('../../assets/tick-wh.png')}  />
                             </div>
                         </div>
-                        <div className ={"item" + `${this.state.focus === 2 ? " active" : "" }`}  onClick = {this.highLight.bind(this, 2)}>
+                        <div className ={"item" + `${this.state.focus === 2 ? " active" : "" }`}  onClick = {this.highLight.bind(this, 2, 30)}>
                             <div className="innerbar">
                                 <img src= {require("../../assets/day-dk.png")} alt="" />
                                 <div className="time">Day</div>
@@ -97,7 +98,7 @@ this.setState({
                             <img src= {require('../../assets/tick-wh-lt.png')}  />
                             </div>
                         </div>
-                        <div className ={"item" + `${this.state.focus === 3 ? " active" : "" }`}  onClick = {this.highLight.bind(this, 3)}>
+                        <div className ={"item" + `${this.state.focus === 3 ? " active" : "" }`}  onClick = {this.highLight.bind(this,3,  100)}>
                             <div className="innerbar">
                                 <img src= {require("../../assets/night-dk.png")}  alt="" />
                                 <div className="time">Night</div>
@@ -118,10 +119,10 @@ this.setState({
                             arcSize={180}
                             min={0}
                             max={100}
+                            value = {this.state.value}
                             color = '#AD6BFF'
                             thumbSize = {20}
-                            strokeWidth = {3}
-                            allowClick
+                            strokeWidth = {3}  
                             onChange={value => this.setState({value})}
                         />
                        <div className = "num" > {this.state.value}</div>

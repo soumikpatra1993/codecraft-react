@@ -139,7 +139,7 @@
   @media (min-width: 700px) and (max-width: 1024px)  {
   
     .image {
-        transform: translate(137px , -25px) scale(1.2);
+        transform: scale(1.2);
     }
     .ranged {
         padding-left: 2em;
