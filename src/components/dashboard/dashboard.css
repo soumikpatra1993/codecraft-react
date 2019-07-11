@@ -217,10 +217,10 @@ color: #AC6CFF;
    }
    .box {
        display: flex;
-       justify-content: space-evenly;
-       padding-top: 2em;
+       justify-content: space-between;
+        padding: 1em 3em;
        height: 1em;
-       padding-bottom: 2em;
+    
    }
    .lists {
        padding: 1.5em;
@@ -291,6 +291,7 @@ color: #AC6CFF;
     justify-content: flex-start;
     flex-wrap: wrap;
     height: 5em;
+    padding: 1em 1em;
     margin-left: 1em;
 }
 .shades {
@@ -304,7 +305,7 @@ color: #AC6CFF;
   padding: 0.2em;
 }
 .ranged {
-  padding-left: 0.7em;
+  padding-left: 1em;
 padding-top: 0
 }
 }
